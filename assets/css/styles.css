@@ -14,12 +14,13 @@
 .creditCardForm label {
   width: 100%;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .creditCardForm .heading h1 {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  color: #4c4e56;
+  color: #fff;
 }
 
 .creditCardForm .payment {

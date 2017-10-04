@@ -14,12 +14,14 @@ body {
 }
 
 #confirm-purchase:hover {
-  background-color: #2ec4a5;
+  background-color: #028dea;
   opacity: 1;
 }
 
 #confirm-purchase {
   opacity: .5;
+  background-color: #028dea;
+  color: white;
 }
 
 .container-fluid {
@@ -32,11 +34,13 @@ header {
   text-align: center;
   width: 100%;
   padding: 25px 40px;
-  background-color: #399de5;
+  background-color: #028dea;
   overflow: hidden;
   box-shadow: 0px 0px 35px 0px;
 }
-
+h3 img{
+  width: 10%;
+}
 header .limiter {
   max-width: 1000px;
   margin: 0px auto;

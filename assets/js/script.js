@@ -8,7 +8,7 @@ $(function() {
   var confirmButton = $('#confirm-purchase');
   var visa = $("#visa");
   var amex = $("#amex");
-  var precio = $('#precio');
+  var amount = $('#amount');
 
   // Use the payform library to format and validate
   // the payment fields.
@@ -61,7 +61,24 @@ $(function() {
     }
   });
 });
-function soloNumeros(e){
-  var key = window.Event ? e.which : e.keyCode
-  return (key >= 48 && key <= 57 || key === 190)
+// function soloNumeros(e){
+//   var key = window.Event ? e.which : e.keyCode
+//   return (key >= 48 && key <= 57 || key === 190)
+// }
+
+function IsNumeric(evt) {
+  var findpoint = false
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode(key);
+  var regex = /[0-9]|\./;
+  if (evt.keyCode == 46 && amount.value.split('').find((e)=>e=='.')=='.') {
+    findpoint = true
+    //console.log(amount.value.split('').find((e)=>e=='.'));
+  }
+
+  if (!regex.test(key) || findpoint) {
+    theEvent.returnValue = false;
+    if (theEvent.preventDefault) theEvent.preventDefault();
+  }
 }

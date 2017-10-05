@@ -25,7 +25,7 @@
       </div>
       <div class="payment">
         <form>
-          <div class="form-group" id="expiratio-date">
+          <div class="form-group " id="expiration-date">
             <label>Payment Date</label>
             <select>
                             <option value="01">January</option>
@@ -49,6 +49,11 @@
                             <option value="21"> 2021</option>
                         </select>
           </div>
+          <div class="form-group CVV">
+            <label for="cvv">Payment Amount</label>
+            <input class="form-control" id="precio" type="text" onKeyPress="return soloNumeros(event)">
+          </div>
+
           <div class="form-group owner">
             <label for="owner">Owner</label>
             <input type="text" class="form-control" id="owner">
@@ -57,11 +62,13 @@
             <label for="cvv">CVV</label>
             <input type="text" class="form-control" id="cvv">
           </div>
+
           <div class="form-group" id="card-number-field">
             <label for="cardNumber">Card Number</label>
             <input type="text" class="form-control" id="cardNumber">
           </div>
-          <div class="form-group" id="expiration-date">
+
+          <div class="form-group " id="expiration-date">
             <label>Expiration Date</label>
             <select>
                             <option value="01">January</option>

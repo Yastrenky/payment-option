@@ -8,6 +8,7 @@ $(function() {
   var confirmButton = $('#confirm-purchase');
   var visa = $("#visa");
   var amex = $("#amex");
+  var precio = $('#precio');
 
   // Use the payform library to format and validate
   // the payment fields.
@@ -60,3 +61,7 @@ $(function() {
     }
   });
 });
+function soloNumeros(e){
+  var key = window.Event ? e.which : e.keyCode
+  return (key >= 48 && key <= 57 || key === 190)
+}
